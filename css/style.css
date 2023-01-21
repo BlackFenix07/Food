@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+main .hero {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  grid-auto-rows: 550px;
+  border-bottom: 1px solid #DDD;
+}
+
+main .hero .info {
+  padding: 15px;
+  align-self: center;
+}
+
+main .hero .info h1 {
+  margin-bottom: 24px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+main .hero .info p {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+main .hero .info button {
+  padding: 12px 24px;
+  font-weight: 700;
+  background: #94E7FF;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+main .hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+main .drinks {
+  margin: 100px 0;
+}
+
+main .drinks .drinks-title {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+main .drinks .drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  gap: 25px;
+}
+
+main .drinks .drinks-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .drinks .drinks-item__big {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+main .snacks {
+  margin-bottom: 200px;
+}
+
+main .snacks .snacks-title {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+main .snacks .snacks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  justify-content: center;
+  gap: 25px;
+}
+
+main .snacks .snacks-grid-item {
+  padding: 15px;
+  background: #94E7FF;
+}
+
+main .snacks .snacks-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  main .hero {
+    grid-template-columns: minmax(300px, 500px);
+    justify-content: center;
+  }
+
+  main .hero-image {
+    display: none;
+  }
+
+  main .drinks .drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+  }
+}
